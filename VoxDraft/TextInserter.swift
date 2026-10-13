@@ -72,7 +72,7 @@ final class TextInserter {
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(text, forType: .string)
         guard let targetPID, let app = NSRunningApplication(processIdentifier: targetPID) else { return false }
-        app.activate()
+        guard app.isActive || app.activate() else { return false }
         try? await Task.sleep(nanoseconds: 180_000_000)
         let source = CGEventSource(stateID: .combinedSessionState)
         guard let down = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_V), keyDown: true),

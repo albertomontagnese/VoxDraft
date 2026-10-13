@@ -1,4 +1,4 @@
-VoxDraft 1.0 beta 2 is a Mac menu bar dictation app. Press Control + Option + D to start speaking, then press it again to insert the transcript into the active text field.
+VoxDraft 1.0 is a Mac menu bar dictation app. Press Control + Option + D to start speaking, then press it again to insert the transcript into the active text field.
 
 It uses Apple's Speech framework, has local history and basic filler cleanup, and can optionally polish text with a local Hermes model through Ollama.
 

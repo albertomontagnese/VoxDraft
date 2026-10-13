@@ -14,7 +14,7 @@ VoxDraft is a native macOS menu bar dictation app. Press **Control + Option + D*
 
 ## Install
 
-Download `VoxDraft-mac.zip` from the [releases page](https://github.com/albertomontagnese/VoxDraft/releases), unzip it, and move VoxDraft.app to Applications. The app appears as a microphone icon in the menu bar.
+Download `VoxDraft-mac.zip` from the [latest release](https://github.com/albertomontagnese/VoxDraft/releases/latest), unzip it, and move VoxDraft.app to Applications. The app appears as a microphone icon in the menu bar.
 
 The current release is signed with Alberto Montagnese's Developer ID Application certificate and notarized by Apple.
 
