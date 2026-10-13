@@ -8,12 +8,13 @@
   <key>CFBundleName</key><string>VoxDraft</string>
   <key>CFBundlePackageType</key><string>APPL</string>
   <key>CFBundleShortVersionString</key><string>1.0</string>
-  <key>CFBundleVersion</key><string>3</string>
+  <key>CFBundleVersion</key><string>4</string>
   <key>LSApplicationCategoryType</key><string>public.app-category.productivity</string>
   <key>LSMinimumSystemVersion</key><string>14.0</string>
   <key>LSUIElement</key><true/>
   <key>NSMicrophoneUsageDescription</key><string>VoxDraft needs the microphone to turn your speech into text.</string>
   <key>NSSpeechRecognitionUsageDescription</key><string>VoxDraft uses speech recognition to transcribe dictation.</string>
   <key>NSAppTransportSecurity</key><dict><key>NSAllowsLocalNetworking</key><true/></dict>
+  <key>ITSAppUsesNonExemptEncryption</key><false/>
   <key>NSHumanReadableCopyright</key><string>© 2026 Alberto Montagnese</string>
 </dict></plist>

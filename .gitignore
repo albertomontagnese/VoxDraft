@@ -1,6 +1,7 @@
 .DS_Store
 build/
 build-universal/
+build-appstore/
 VoxDraft.app/
 VoxDraft-mac.zip
 VoxDraft-mac.zip.sha256
