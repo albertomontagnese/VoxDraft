@@ -1,0 +1,47 @@
+name: Build and release
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build universal macOS app
+        run: |
+          xcodebuild -project VoxDraft.xcodeproj \
+            -scheme VoxDraft -configuration Release \
+            -derivedDataPath build \
+            -destination 'generic/platform=macOS' \
+            ARCHS='arm64 x86_64' ONLY_ACTIVE_ARCH=NO \
+            CODE_SIGNING_ALLOWED=NO build
+          lipo -info build/Build/Products/Release/VoxDraft.app/Contents/MacOS/VoxDraft
+      - name: Package app
+        run: |
+          ditto build/Build/Products/Release/VoxDraft.app VoxDraft.app
+          codesign --force --deep --sign - VoxDraft.app
+          codesign --verify --deep --strict VoxDraft.app
+          ditto -c -k --sequesterRsrc --keepParent VoxDraft.app VoxDraft-mac.zip
+          shasum -a 256 VoxDraft-mac.zip > VoxDraft-mac.zip.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VoxDraft-mac
+          path: |
+            VoxDraft-mac.zip
+            VoxDraft-mac.zip.sha256
+      - name: Publish GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            VoxDraft-mac.zip VoxDraft-mac.zip.sha256 \
+            --title "VoxDraft ${GITHUB_REF_NAME}" \
+            --notes-file RELEASE_NOTES.md
