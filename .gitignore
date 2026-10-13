@@ -1,0 +1,8 @@
+.DS_Store
+build/
+build-universal/
+VoxDraft.app/
+VoxDraft-mac.zip
+*.xcuserstate
+xcuserdata/
+.github/workflows/
