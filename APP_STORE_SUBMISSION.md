@@ -4,7 +4,8 @@ The App Store build uses `VoxDraftAppStore.entitlements` and the `APP_STORE` com
 
 ## Store information
 
-- App name: VoxDraft
+- App name: VoxDraft AI Dictation
+- App Store Connect app ID: `6822166099`
 - Platform: macOS
 - Bundle ID: `com.albertomontagnese.VoxDraft`
 - SKU: `voxdraft-macos-001`
@@ -17,6 +18,7 @@ The App Store build uses `VoxDraftAppStore.entitlements` and the `APP_STORE` com
 - Keywords: dictation,speech to text,voice typing,transcription,writing
 - Support URL: https://github.com/albertomontagnese/VoxDraft/issues
 - Privacy policy URL: https://github.com/albertomontagnese/VoxDraft/blob/main/PRIVACY.md
+- Required Mac screenshot: `assets/app-store/voxdraft-settings-2560x1600.png`
 
 ## Description
 
@@ -43,3 +45,5 @@ The app uses no custom cryptography; `ITSAppUsesNonExemptEncryption` is false. T
 ## Build
 
 Set `APP_STORE_TEAM_ID`, `ASC_PRIVATE_KEY`, `ASC_KEY_ID`, and `ASC_ISSUER_ID`, then run `tools/package-appstore.sh`. It creates an App Store Connect installer package under `build-appstore/<timestamp>/export/VoxDraft.pkg` using automatic distribution signing.
+
+The 1.0 (5) package was validated and uploaded to App Store Connect on October 13, 2026 with zero warnings. Delivery UUID: `18134884-34f0-4e35-8c85-f1673692d728`.

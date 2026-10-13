@@ -28,7 +28,7 @@ request.body = File.read(body_path) if body_path
 response = Net::HTTP.start(url.host, url.port, use_ssl: true) { |http| http.request(request) }
 puts "HTTP #{response.code}"
 begin
-  puts JSON.pretty_generate(JSON.parse(response.body))
+  puts JSON.pretty_generate(JSON.parse(response.body)) unless response.body.nil? || response.body.empty?
 rescue JSON::ParserError
   puts response.body
 end

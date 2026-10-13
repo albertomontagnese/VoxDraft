@@ -2,6 +2,7 @@
 build/
 build-universal/
 build-appstore/
+build-screenshot/
 VoxDraft.app/
 VoxDraft-mac.zip
 VoxDraft-mac.zip.sha256

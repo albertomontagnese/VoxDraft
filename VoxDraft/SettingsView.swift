@@ -4,7 +4,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var controller: DictationController
-    @AppStorage("locale") private var locale = Locale.current.identifier
+    @AppStorage("locale") private var locale = Locale.current.identifier.replacingOccurrences(of: "_", with: "-")
     @AppStorage("localOnly") private var localOnly = false
     @AppStorage("basicCleanup") private var basicCleanup = true
     @AppStorage("useHermes") private var useHermes = false
