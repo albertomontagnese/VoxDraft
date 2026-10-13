@@ -47,3 +47,9 @@ The app uses no custom cryptography; `ITSAppUsesNonExemptEncryption` is false. T
 Set `APP_STORE_TEAM_ID`, `ASC_PRIVATE_KEY`, `ASC_KEY_ID`, and `ASC_ISSUER_ID`, then run `tools/package-appstore.sh`. It creates an App Store Connect installer package under `build-appstore/<timestamp>/export/VoxDraft.pkg` using automatic distribution signing.
 
 The 1.0 (5) package was validated and uploaded to App Store Connect on October 13, 2026 with zero warnings. Delivery UUID: `18134884-34f0-4e35-8c85-f1673692d728`.
+
+## Submission
+
+Version 1.0 (5) was submitted for Mac App Store review on October 13, 2026 at 15:48:54 UTC. Review submission ID: `a1bed445-169b-4117-84e2-0e9738b039be`. Apple reports `WAITING_FOR_REVIEW`. The version is set to release automatically if approved.
+
+The same source revision was separately signed and notarized for direct installation. The updated Developer ID build is installed at `/Applications/VoxDraft.app` as build 5.
