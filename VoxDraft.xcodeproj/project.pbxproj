@@ -26,6 +26,7 @@
 		50682024DE9D1460D3593A26 /* DictationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationEngine.swift; sourceTree = "<group>"; };
 		6A2AE8D176FED1772B2AAF7F /* VoxDraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxDraftApp.swift; sourceTree = "<group>"; };
 		89915FF8993B30D23FF08E44 /* TextInserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInserter.swift; sourceTree = "<group>"; };
+		9EADC263AC589C6C99A0A68B /* VoxDraft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoxDraft.entitlements; sourceTree = "<group>"; };
 		A3FF0DE1AE4D5EBBEF446600 /* GlobalHotkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotkey.swift; sourceTree = "<group>"; };
 		A4AE92AE3EB165B6963FA1E7 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
 		A4D4710697E51F2988D73A31 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 				42D75BD1E2DD7D79DB7995DE /* StatusHUD.swift */,
 				B1A6F18CC2D50464313365F9 /* TextCleanup.swift */,
 				89915FF8993B30D23FF08E44 /* TextInserter.swift */,
+				9EADC263AC589C6C99A0A68B /* VoxDraft.entitlements */,
 				6A2AE8D176FED1772B2AAF7F /* VoxDraftApp.swift */,
 			);
 			path = VoxDraft;
@@ -279,9 +281,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = VoxDraft/VoxDraft.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = VoxDraft/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -298,9 +301,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = VoxDraft/VoxDraft.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = VoxDraft/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

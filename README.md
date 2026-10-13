@@ -16,7 +16,7 @@ VoxDraft is a native macOS menu bar dictation app. Press **Control + Option + D*
 
 Download `VoxDraft-mac.zip` from the [releases page](https://github.com/albertomontagnese/VoxDraft/releases), unzip it, and move VoxDraft.app to Applications. The app appears as a microphone icon in the menu bar.
 
-The release is ad hoc signed and is not Apple notarized. macOS may require you to open it through Finder's **Open** command the first time. A notarized release requires a Developer ID Application certificate.
+The current release is signed with Alberto Montagnese's Developer ID Application certificate and notarized by Apple.
 
 ## Build and run
 
@@ -32,6 +32,10 @@ The first dictation prompts for Microphone and Speech Recognition. To insert int
 For Hermes cleanup, install Ollama, run `ollama pull hermes3`, and enable Hermes in VoxDraft's settings. Ollama is optional. Dictation works without it.
 
 Dictations are stored locally. See [Privacy](PRIVACY.md) for the speech recognition and Hermes data flows.
+
+## Make a signed release
+
+`tools/package-notarized.sh` builds both Mac architectures, signs with Developer ID, submits the app to Apple's notary service, staples the ticket, verifies Gatekeeper acceptance, and writes `VoxDraft-mac.zip` plus its SHA-256 checksum. It reads signing identity and App Store Connect API key information from environment variables; secrets are not stored in this repository.
 
 ## Limits
 
