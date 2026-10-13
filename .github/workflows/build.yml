@@ -12,7 +12,7 @@ jobs:
   macos:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Build universal macOS app
         run: |
           xcodebuild -project VoxDraft.xcodeproj \
@@ -29,7 +29,7 @@ jobs:
           codesign --verify --deep --strict VoxDraft.app
           ditto -c -k --sequesterRsrc --keepParent VoxDraft.app VoxDraft-mac.zip
           shasum -a 256 VoxDraft-mac.zip > VoxDraft-mac.zip.sha256
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: VoxDraft-mac
           path: |
